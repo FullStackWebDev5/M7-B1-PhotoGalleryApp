@@ -1,11 +1,12 @@
 import { Container, Navbar, Nav } from "react-bootstrap"
 import brandLogo from '../assets/brand-logo.png'
+import { NavLink } from 'react-router-dom'
 
-const NavbarComponent = ({ setPage }) => {
+const NavbarComponent = () => {
 	return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="" onClick={() => setPage("Home")}>
+        <Navbar.Brand as={NavLink} to="/">
           <img
             alt="logo"
             src={brandLogo}
@@ -18,15 +19,15 @@ const NavbarComponent = ({ setPage }) => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="" onClick={() => setPage("Home")}>
+            <Nav.Link as={NavLink} to="/">
               Home
             </Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="" onClick={() => setPage("About Us")}>
+            <Nav.Link as={NavLink} to="/about">
               About Us
             </Nav.Link>
-            <Nav.Link href="" onClick={() => setPage("Contact Us")}>
+            <Nav.Link as={NavLink} to="/contact">
               Contact Us
             </Nav.Link>
           </Nav>

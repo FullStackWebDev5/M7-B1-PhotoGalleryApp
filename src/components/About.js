@@ -4,7 +4,7 @@ import brandLogo from '../assets/brand-logo.png'
 const About = () => {
   return (
     <Container style={{ textAlign: "center" }}>
-      <h1 className="display-4">About Us</h1>
+      <h1 className="display-4 mt-2 mb-4">About Us</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa optio
         magnam pariatur ducimus, reiciendis id, unde repellendus ea debitis,
