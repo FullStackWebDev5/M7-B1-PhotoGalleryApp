@@ -26,8 +26,19 @@ const Photos = () => {
                 />
                 <Card.Body>
                   <Card.Title>{photo.author}</Card.Title>
-                  <a href={photo.url} className="btn btn-dark btn-sm">
+                  <a
+                    href={photo.url}
+                    className="btn btn-dark btn-sm"
+                    style={{ margin: "0 5px" }}
+                  >
                     View details
+                  </a>
+                  <a
+                    href={photo.url}
+                    className="btn btn-dark btn-sm"
+                    style={{ margin: "0 5px" }}
+                  >
+                    View enlarged
                   </a>
                 </Card.Body>
               </Card>
