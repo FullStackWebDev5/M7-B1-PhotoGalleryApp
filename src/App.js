@@ -5,7 +5,7 @@ import NavbarComponent from "./components/NavbarComponent"
 import Photos from "./components/Photos"
 import About from './components/About'
 import Contact from './components/Contact'
-// import Photo from './components/Photo'
+import Photo from './components/Photo'
 
 function App() {
   return (
@@ -21,10 +21,17 @@ function App() {
 				<Route path="/contact">
 					<Contact />
 				</Route>
+				<Route path="/photos/:id">
+					<Photo />
+				</Route>
 			</Switch>
-			{/* <Photo /> */}
     </BrowserRouter>
   );
 }
 
 export default App;
+
+/* Dynamic Routing
+		- Params in the path (Params are variables in the URL)
+		- Should start with :
+*/

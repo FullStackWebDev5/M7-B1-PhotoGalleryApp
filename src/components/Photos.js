@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Container, Row, Col, Card, Spinner } from "react-bootstrap";
-import axios from "axios";
+import { Container, Row, Col, Card, Spinner } from "react-bootstrap"
+import axios from "axios"
+import { Link } from 'react-router-dom'
 
 const Photos = () => {
   const [photos, setPhotos] = useState([]);
@@ -33,13 +34,13 @@ const Photos = () => {
                   >
                     View details
                   </a>
-                  <a
-                    href={photo.url}
+                  <Link
+                    to={`/photos/${photo.id}`}
                     className="btn btn-dark btn-sm"
                     style={{ margin: "0 5px" }}
                   >
                     View enlarged
-                  </a>
+                  </Link>
                 </Card.Body>
               </Card>
             </Col>
